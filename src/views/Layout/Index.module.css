@@ -1,0 +1,16 @@
+.layout{
+    height: 100vh;
+}
+.header{
+    background-color: #fff;
+    text-align: right;
+}
+.title{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: aliceblue;
+}
+.content{
+  
+}

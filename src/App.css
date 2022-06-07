@@ -1,0 +1,10 @@
+@import 'antd/dist/antd.css';
+.ml{
+    margin-left: 10px;
+}
+.mt{
+    margin-top: 20px;
+}
+.red{
+    color: red;
+}

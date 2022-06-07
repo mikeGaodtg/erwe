@@ -1,0 +1,14 @@
+.card{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+.timer{
+    font-size: 30px;
+    font-family: fantasy;
+}
+.red{
+    color: red;
+    font-size: 30px;
+    font-family: fantasy;
+}
