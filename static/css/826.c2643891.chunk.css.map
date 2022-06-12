@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/826.c2643891.chunk.css","mappings":"AAAA,kBAGI,qBAAgB,CAFhB,SAKA,CACJ,mBACI,YACA","sources":["views/home/home.module.css"],"sourcesContent":[".wrap{\r\n    width: 95%;\r\n    margin: auto;\r\n    margin-top: 15px;\r\n    \r\n\r\n    }\r\n.graph{\r\n    height: 300px;\r\n    }"],"names":[],"sourceRoot":""}
