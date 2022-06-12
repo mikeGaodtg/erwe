@@ -9,6 +9,13 @@ export function login(data){
        
    })
 }
+export function register(data) {
+  return request({
+    url: '/user/register',
+    method: 'post',
+    data
+  })
+}
 
 // use token to get user authorization
 export function getInfo(){

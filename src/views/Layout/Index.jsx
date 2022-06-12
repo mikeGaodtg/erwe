@@ -48,13 +48,13 @@ class Index extends Component {
         </SubMenu>
       }
       return <Menu.Item key={item.path}>
-        <NavLink to={"/index" + item.path}>
+        <NavLink to={"/edu-management/index" + item.path}>
           {item.meta.title}
         </NavLink>
       </Menu.Item>
     })
   }
-
+  // /edu-management/index/home
   // creat async router
   renderRoute=(menu)=>{
     let routerList=[];
@@ -64,7 +64,7 @@ class Index extends Component {
                 asyncRoute(item.children)
             }else{
               routerList.push(
-                <Route path={`/index${item.path}`} component={lazy(()=>import(`@/views${item.path}/Index.jsx`))} key={item.path}></Route>
+                <Route path={`/edu-management/index${item.path}`} component={lazy(()=>import(`@/views${item.path}/Index.jsx`))} key={item.path}></Route>
               )
             }
           })
@@ -72,24 +72,6 @@ class Index extends Component {
       asyncRoute(menu);
       return routerList
   }
-  // renderRoute=(menu)=>{
-  //   let routerList=[];
-  //   const asyncRoute=(data)=>{
-  //         data.forEach((item)=>{
-  //           if(item.children){
-  //               asyncRoute(item.children)
-  //           }else{
-  //             routerList.push(
-  //               <Route path={`/layout${item.path}`} component={lazy(()=>import(`@/views${item.path}/Index.jsx`))} key={item.path}></Route>
-  //             )
-  //           }
-  //         })
-  //     }
-  //     asyncRoute(menu);
-  //     return routerList
-  // }
-
-
 
   render() {
     
