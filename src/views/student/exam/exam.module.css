@@ -1,0 +1,12 @@
+.forp{
+    line-height: 40px;
+    vertical-align: center;
+    transform: translate(0,10px);
+}
+.inputw80{
+    width: 80%;
+}
+.flexcenter{
+    display: flex;
+    justify-content: center;
+}

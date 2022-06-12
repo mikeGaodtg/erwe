@@ -41,7 +41,9 @@ export default class teacher extends Component {
     }))
   }
   search = () => {
+
     const formData = this.formRef.current.getFieldsValue(true);
+    console.log(formData)
     this.setState({formData},()=>{
       this.loadData();
       this.setState({formData:{}})
@@ -260,7 +262,6 @@ export default class teacher extends Component {
                     <Option value="物理">Physics</Option>
                     <Option value="化学">Chemistry</Option>
                     <Option value="生物">Biology</Option>
-
                   </Select>
                   </Form.Item>
               </Col>
@@ -300,10 +301,10 @@ export default class teacher extends Component {
          
         }}
         />
-             <Pagination showQuickJumper 
+             <Pagination 
+             showQuickJumper 
              showSizeChanger
              total={total} 
-         
              onChange={this.pageChange} 
              />
         </Card>
