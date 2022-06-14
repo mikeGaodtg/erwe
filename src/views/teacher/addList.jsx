@@ -40,7 +40,7 @@ export default class addList extends Component {
         ).catch(err => console.log(err))
     }
     componentDidUpdate(){
-        console.log(this.props.record)
+
     }
     render() {
         const { visible,title } = this.props

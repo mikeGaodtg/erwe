@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import style from './Index.module.css'
 import { Card, Tabs, message } from 'antd';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Checkbox, notification } from 'antd';
 import { login } from '../../api/index'
 import { connect } from 'react-redux';
 import { loginAction, menuAction } from '../../redux/action/loginAction';
@@ -28,7 +28,7 @@ class Login extends Component {
                 menuAction(menuFilter(asyncRouterMap, res.role));
                 //both action for storing data into redux store
 
-                history.push("/edu-management/index/home");
+                history.push("/index/home");
             }
 
             ).catch(err => console.log(err))
@@ -46,10 +46,17 @@ class Login extends Component {
         }).catch(res => console.log(res))
     }
     componentDidMount() {
-        message.success(
-            'Account : xuchao', 10);
-        message.success(
-            'password : 123456', 10)
+   
+        notification.info({
+            message:
+            <div>
+            <p>username : xuchao</p>
+            <p>password :123456</p>
+            </div>
+             ,
+            placement: 'top'
+        })
+
     }
     render() {
 
@@ -70,6 +77,7 @@ class Login extends Component {
                                     wrapperCol={{ span: 24 }}
                                     autoComplete="off"
                                 >
+
                                     <Form.Item
                                         name="username"
                                         rules={[{

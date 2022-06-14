@@ -15,19 +15,19 @@ export default class App extends Component {
       <div>
          <BrowserRouter>
          <Switch>
-         <Route path="/edu-management" exact render={(props)=>{
-           return <Redirect to='edu-management/login'></Redirect>
+         <Route path="/" exact render={(props)=>{
+           return <Redirect to='/login'></Redirect>
         }}  ></Route>
-         <Route path='/edu-management/index' render={(props)=>{
+         <Route path='/index' render={(props)=>{
            if(authLogin()){
             return <Layout {...props}></Layout>
-           }return <Redirect to='/edu-management/login' ></Redirect>
+           }return <Redirect to='/login' ></Redirect>
         
         }} ></Route>
-         <Route path='/edu-management/login'  render={(props)=>{
+         <Route path='/login'  render={(props)=>{
            if(!authLogin()){
             return <Login {...props}></Login>
-           }return <Redirect to='/edu-management/index/home' ></Redirect>
+           }return <Redirect to='/index/home' ></Redirect>
         
         }} ></Route>
          </Switch>

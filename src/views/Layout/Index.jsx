@@ -48,7 +48,7 @@ class Index extends Component {
         </SubMenu>
       }
       return <Menu.Item key={item.path}>
-        <NavLink to={"/edu-management/index" + item.path}>
+        <NavLink to={"/index" + item.path}>
           {item.meta.title}
         </NavLink>
       </Menu.Item>
@@ -64,7 +64,7 @@ class Index extends Component {
                 asyncRoute(item.children)
             }else{
               routerList.push(
-                <Route path={`/edu-management/index${item.path}`} component={lazy(()=>import(`@/views${item.path}/Index.jsx`))} key={item.path}></Route>
+                <Route path={`/index${item.path}`} component={lazy(()=>import(`@/views${item.path}/Index.jsx`))} key={item.path}></Route>
               )
             }
           })

@@ -178,7 +178,7 @@ export default class exam extends Component {
                       name="type"
                       className={style.inputw80}
                     >
-                      <Select style={{ width: 300 }} >
+                      <Select  >
                         <Option value="">all</Option>
                         <Option value="1">final</Option>
                         <Option value="2">semi-final</Option>

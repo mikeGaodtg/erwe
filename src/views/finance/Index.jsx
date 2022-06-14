@@ -1,14 +1,23 @@
 import React, { Component } from 'react'
-
+import { Button, Result } from 'antd';
 export default class finace extends Component {
-  componentDidMount(){
-    console.log(this.a)
-  }
+ toHomePage=()=>{
+   this.props.history.push("/index/home")
+ }
 
   render() {
     return (
-      <div>finace
-        <div ref={c=>this.a=c}>你好</div>
+      <div>
+   
+          <Result
+            status="404"
+            title="404"
+            subTitle="Sorry, the page you visited does not exist."
+            extra={<Button type="primary" 
+            onClick={this.toHomePage}
+            >Back Home</Button>}
+          />
+      
       </div>
     )
   }

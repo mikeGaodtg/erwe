@@ -40,7 +40,7 @@ export const asyncRouterMap = [
             {
                 path: '/student/info',
                 name: 'Info',
-                meta: {title:"学生信息",role: ['admin','teacher','manager'],icon:"file-text",bread:['学生管理','学生信息']},
+                meta: {title:"studsInfo",role: ['admin','teacher','manager'],icon:"file-text",bread:['学生管理','学生信息']},
             },
             {
                 path: '/student/exam',
