@@ -70,7 +70,6 @@ export default class teacher extends Component {
   }
 
   pageChange = (page, pageSize) => {
-    
     this.setState({
       pageData: {
         page,
