@@ -6,3 +6,19 @@ export function examList(data) {
         data
     })
 }
+//正式学员列表
+export function studentList(data) {
+    return request({
+        url: '/student/formalStudents',
+        method: 'post',
+        data
+    })
+}
+//删除学员
+export function deleteStudent(data) {
+    return request({
+        url: '/student/deleteStudent',
+        method: 'post',
+        data
+    })
+}
